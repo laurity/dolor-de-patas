@@ -1,0 +1,14 @@
+.card {
+    width: 300px; /* Ajusta el ancho de la tarjeta */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Añade sombra a la tarjeta */
+    transition: 0.3s; /* Añade transiciones para un efecto de "hover" suave */
+}
+
+.card img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); /* Aumenta la sombra en "hover" */
+}
