@@ -11,8 +11,8 @@
 
 <body>
     <header>
-        <nav>
-            <button class="hamburger">&#9776;</button>
+        
+        <nav class="navbar">
             <a href="index.html"><img src="logo.png" alt="logo" class="logo"></a>
             <ul class="nav-li">
                 <li><a href="index.html">Inicio</a></li>
@@ -25,7 +25,6 @@
     <main>
         <section class="section-one">
             <h1>¡Salva vidas!</h1>
-            <h2>¡Bienvenido a Dolor de Patas!</h2>
             <p>Fundación respaldada por <a href="https://amigosdelperro.org/">Amigos del Perro</a></p>
         </section>
 
@@ -207,17 +206,12 @@
             }
         }
 
-        window.onscroll = function () {
-            let navbar = document.querySelector("nav");
-            if (window.pageYOffset > 50) {
-                navbar.classList.add("fixed-nav");
-            } else {
-                navbar.classList.remove("fixed-nav");
-            }
-        }
-        document.querySelector('.hamburger').addEventListener('click', function () {
-            document.querySelector('.nav-li').classList.toggle('active');
-        });
+        function toggleNavbar() {
+    const navbar = document.querySelector('.navbar');
+    const navItems = document.querySelectorAll('.navbar li');
+    navbar.classList.toggle('active');
+    navItems.forEach(item => item.classList.toggle('active'));
+}
     </script>
 </body>
 

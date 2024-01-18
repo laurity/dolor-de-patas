@@ -1,34 +1,126 @@
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
 *,
 ::after,
 ::before {
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
-@media screen and (max-width: 600px) {
-    .hamburger {
-        display: block;
-    }
 
-    .nav-li {
-        display: none;
-    }
-
-    .nav-li.active {
-        display: flex;
-    }
-}
-.hamburger {
-    display: none;
+/*NAV*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
 }
 
 .logo{
-    width: 100px;
     height: 100px;
-    display: block;
+    width: 100px;
 }
+
+.nav-li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    
+}
+
+.nav-li li {
+    padding: 0 25px;
+    border-left: #861ec7 1px solid;
+}
+
+.nav-li a {
+    color: #861ec7;
+    text-decoration: none;
+    font-size: x-large
+}
+
+.nav-li a:hover {
+    transition: all 1s ease 0s;
+    color: #000
+}
+
+
+
+
+
+
+
 .section-one{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background: url(/assets/img/heroimage.png) no-repeat center/cover;
+    background-size: cover;
+    background-position: center top;
+    height: 75vh;
+    
 }
+.section-one::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+}
+
+.section-one h1{
+    position: relative;
+    margin: 1%;
+    color: #fff;
+    font-size: 4rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5rem;
+    text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.section-one a {
+    position: relative;
+    color: #ff5dec;
+    text-decoration: none;
+    text-shadow: none;
+}
+
+.section-one a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ff5dec;
+    transition: width 1s;
+}
+
+.section-one a:hover::after {
+    width: 100%;
+}
+
+.section-one a:hover {
+    font-size: 2rem;
+    transition: all 1s ease 0s;
+}
+.section-one p{
+    position: relative;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5rem;
+    text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+
 
 .card {
     width: 300px; 
