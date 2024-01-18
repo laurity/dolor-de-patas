@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,12 @@
     <link rel="short icon" href="logo.png">
     <title>Dolor de patas</title>
 </head>
+
 <body>
     <header>
         <nav>
-            <a href="index.html"><img src="logo.png" alt="logo"></a>
+            <button class="hamburger">&#9776;</button>
+            <a href="index.html"><img src="logo.png" alt="logo" class="logo"></a>
             <ul class="nav-li">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
@@ -28,39 +31,194 @@
 
         <section class="section-two">
             <h2>¿Qué es Dolor de Patas?</h2>
-            <p>Dolor de patas es una página web que te permite adoptar a un perro o gato con alguna discapacidad o enfermedad en busca de una vida plena</p>  
+            <p>Dolor de patas es una página web que te permite adoptar a un
+                perro o gato con alguna discapacidad o enfermedad en busca de una
+                vida plena y digna.</p>
         </section>
 
         <section class="section-three">
+            <div class="contenedor-section-three">
+                <div class="adoptar">
+                    <h2>Adopta</h2>
+                    <p>Descubre la maravillosa oportunidad de transformar vidas
+                        y recibir amor incondicional adoptando a una mascota con
+                        habilidades especiales. En nuestro refugio, encontrarás
+                        gatos y perros con historias inspiradoras, cada uno con su
+                        propia forma única de superar desafíos.</p>
+                    <a href="/templates/contacto.html" class="button">Más información</a>
+                </div>
+                <div class="apadrinar">
+                    <h2>Adopta</h2>
+                    <p>Cada uno de estos compañeros extraordinarios tiene un
+                        corazón lleno de gratitud y amor, esperando ansiosamente a
+                        que alguien como tú les brinde la oportunidad de tener una
+                        vida mejor. Ya sea contribuyendo con sus necesidades
+                        médicas, proporcionando juguetes adaptados o simplemente
+                        ofreciendo tu cariño, tu apadrinamiento marca la
+                        diferencia.</p>
+                    <a href="/templates/contacto.html" class="button">Más información</a>
+
+                </div>
+                <div class="preguntas">
+                    <h2>FAQ</h2>
+                    <p>
+                        ¿Por qué adoptar a una mascota con discapacidad?<br>
+                        ¿Cómo sé si una mascota discapacitada se adapta a mi estilo de vida?<br>
+                        ¿Cuáles son las necesidades específicas de estos animales?<br>
+                        ¿Cómo puedo apadrinar a una mascota con discapacidad?<br>
+                        ¿Puedo visitar el refugio antes de decidir?<br>
+                    </p>
+                    <a href="/templates/contacto.html" class="button">Tús respuestas aquí</a>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section-four">
             <h2>¿Quén será tú futuro compañero?</h2>
             <div class="card">
                 <img src="/assets/img/perro 1.jpg" alt="Yaki">
                 <h3>Yaki</h3>
-                <p>Descripción de la tarjeta 1.</p>
+                <p>Conoce a Yaki, un perro extraordinario lleno de energía y
+                    amor. A pesar de un accidente que le impide utilizar sus patas
+                    traseras, Yaki irradia alegría y superación. Su espíritu
+                    resiliente busca un hogar lleno de comprensión y cariño. ¡Adopta
+                    a Yaki y sé parte de su increíble historia de valentía!</p>
+                <button class="modal-button">Más información</button>
+            </div>
+            <div id="modalYaki" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <img src="/assets/img/perro 1.jpg" alt="Yaki">
+                    <h3>Yaki</h3>
+                    <p>
+                        Sexo: Macho<br>
+                        Nacimiento: 15/12/2019<br>
+                        Raza: Mestizo<br>
+                        Tamaño: Mediano Pastor Belga<br>
+                        Peso: 15 kg<br>
+                        Esterilizado: Sí<br>
+                    </p>
+                </div>
             </div>
             <div class="card">
                 <img src="/assets/img/gato 1.jpg" alt="Pumba">
                 <h3>Pumba</h3>
-                <p>Descripción de la tarjeta 2.</p>
+                <p>Descubre la asombrosa fortaleza de Pumba, un gatito de 4
+                    meses que desafía las adversidades al haber nacido sin patas
+                    delanteras. A pesar de su pequeño tamaño, Pumba es un torbellino
+                    de alegría y curiosidad. Este gatito valiente busca un hogar
+                    amoroso que aprecie su espíritu inquebrantable y lo cuide con
+                    ternura. ¡Abre tu corazón a Pumba y experimenta el amor sin
+                    límites que tiene para ofrecer!</p>
+                <button class="modal-button">Más información</button>
+            </div>
+            <div id="modalPumba" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <img src="/assets/img/gato 1.jpg" alt="Pumba">
+                    <h3>Pumba</h3>
+                    <p>
+                        Sexo: Macho<br>
+                        Nacimiento: 21/09/2023<br>
+                        Raza: Gato común Europeo<br>
+                        Tamaño: Pequeño<br>
+                        Peso: 1 kg<br>
+                        Esterilizado: No<br>
+                    </p>
+                </div>
             </div>
             <div class="card">
                 <img src="/assets/img/perro 2.jpg" alt="Timba">
                 <h3>Timba</h3>
-                <p>Descripción de la tarjeta 2.</p>
+                <p>Conoce a Timba, una boxer anciana que, a pesar de la sordera,
+                    irradia calma y amor. En busca de un hogar tranquilo que aprecie
+                    su serenidad y la haga sentir amada en sus años dorados. ¿Listo
+                    para brindarle a Timba un retiro lleno de afecto?</p>
+                <button class="modal-button">Más información</button>
             </div>
-            <div class="card">
-                <img src="/assets/img/gato 2.jpg" alt="Bimba">
-                <h3>Bimba</h3>
-                <p>Descripción de la tarjeta 2.</p>
-            </div>
+            <div id="modalTimba" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <img src="/assets/img/perro 2.jpg" alt="Timba">
+                    <h3>Timba</h3>
+                    <p>
+                        Sexo: Hembra<br>
+                        Nacimiento: 05/02/2012<br>
+                        Raza: Boxer<br>
+                        Tamaño: Grande<br>
+                        Peso: 30 kg<br>
+                        Esterilizado: Sí<br>
+                        
+                </div>
+                <div class="card">
+                    <img src="/assets/img/gato 2.jpg" alt="Bimba">
+                    <h3>Bimba</h3>
+                    <p>Conoce a Bimba, una gata sin ojos que despierta admiración
+                        con su valentía y encanto. Aunque no ve con sus ojos, su corazón
+                        está lleno de curiosidad y cariño. Bimba busca un hogar amoroso
+                        que valore su esencia única y le ofrezca un entorno seguro donde
+                        pueda explorar con confianza. ¡Adopta a Bimba y descubre la
+                        belleza excepcional de su mundo interior!</p>
+                    <button class="modal-button">Más información</button>
+                </div>
+                <div id="modalBimba" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <img src="/assets/img/gato 2.jpg" alt="Bimba">
+                        <h3>Bimba</h3>
+                        <p>
+                            Sexo: Hembra<br>
+                            Nacimiento: 10/08/2017<br>
+                            Raza: Gato común Europeo<br>
+                            Tamaño: Pequeño<br>
+                            Peso: 4 kg<br>
+                            Esterilizado: Sí<br>
+                        
+                        
+                    </div>
         </section>
 
-       
+
 
     </main>
 
     <footer>
 
     </footer>
+    <script>
+        let modals = document.getElementsByClassName("modal");
+        let btns = document.getElementsByClassName("modal-button");
+        let spans = document.getElementsByClassName("close");
+
+        for (let i = 0; i < btns.length; i++) {
+            btns[i].onclick = function () {
+                modals[i].style.display = "block";
+            }
+
+            spans[i].onclick = function () {
+                modals[i].style.display = "none";
+            }
+
+            window.onclick = function (event) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+
+        window.onscroll = function () {
+            let navbar = document.querySelector("nav");
+            if (window.pageYOffset > 50) {
+                navbar.classList.add("fixed-nav");
+            } else {
+                navbar.classList.remove("fixed-nav");
+            }
+        }
+        document.querySelector('.hamburger').addEventListener('click', function () {
+            document.querySelector('.nav-li').classList.toggle('active');
+        });
+    </script>
 </body>
+
 </html>
