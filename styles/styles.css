@@ -1,11 +1,25 @@
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+/*Key Frames*/
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 
 *,
 ::after,
 ::before {
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Nunito', sans-serif;
+}
+.section-one h1, .section-one p, .section-one a {
+    animation: fadeIn 2s ease-in-out;
 }
 
 /*NAV*/
@@ -43,12 +57,7 @@
     color: #000
 }
 
-
-
-
-
-
-
+/*SECTION ONE*/
 .section-one{
     position: relative;
     display: flex;
@@ -73,7 +82,7 @@
 
 .section-one h1{
     position: relative;
-    margin: 1%;
+    margin: 2.5%;
     color: #fff;
     font-size: 4rem;
     text-align: center;
@@ -85,6 +94,7 @@
 
 .section-one a {
     position: relative;
+    font-weight: bold;
     color: #ff5dec;
     text-decoration: none;
     text-shadow: none;
@@ -115,24 +125,144 @@
     font-size: 1.5rem;
     text-align: center;
     text-transform: uppercase;
-    font-weight: 700;
     letter-spacing: 0.5rem;
     text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
 }
 
 
+/* SECTION TWO */
+.section-two {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(225, 209, 240);
+    padding: 2rem 0;
+}
+
+.contenedor-section-two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+    background-color: rgb(225, 209, 240);
+}
+
+.adoptar, .apadrinar, .preguntas {
+    width: 100%;
+    padding: 2% 5%;
+}
+
+.adoptar img, .apadrinar img, .preguntas img {
+    width: 100%;
+    max-width: 200px; 
+    height: auto;
+}
+
+.contenedor-section-two h2 {
+    font-size: 2rem; 
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.contenedor-section-two p {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.contenedor-section-two a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #5cc9ff;
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease 0s;
+}
+
+
+@media screen and (max-width: 768px) {
+    .contenedor-section-two {
+        flex-direction: column; 
+    }
+
+    .adoptar, .apadrinar, .preguntas {
+        padding: 2% 2%;
+    }
+}
+
+
+
+/*section-three*/
+.section-three{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+
+/*CARDS*/
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1em;
+}
 
 .card {
-    width: 300px; 
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
-    transition: 0.3s; 
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    margin: 1em;
+    overflow: hidden;
+    width: 300px; /* Ajusta esto según tus necesidades */
+    display: flex;
+    flex-direction: column;
 }
 
 .card img {
-    width: 100%; 
-    height: auto; 
+    width: 100%;
+    height: auto;
 }
 
+.card h3 {
+    margin: 0;
+    padding: 1em;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.card p {
+    padding: 1em;
+    color: #666;
+    line-height: 1.5;
+}
+
+.card .modal-button {
+    margin: 1em;
+    padding: 0.75em 1em;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); 
 }
@@ -183,3 +313,4 @@
     text-decoration: none;
     cursor: pointer;
 }
+
