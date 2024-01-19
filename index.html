@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/inicio.css">
     <link rel="short icon" href="logo.png">
     <title>Dolor de patas - Amigos del Perro</title>
 </head>
@@ -13,7 +13,7 @@
     <header>
         <a href="index.html"><img src="logo.png" alt="logo" class="logo"></a>
         <nav class="navbar">
-            
+
             <ul class="nav-li">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
@@ -230,8 +230,8 @@
                     1 1-1h3z" />
                             </svg></a></li>
 
-                            <!-- Social creador-->
-                            
+                    <!-- Social creador-->
+
                     <li><a href="https://github.com/laurity/dolor-de-patas"><svg xmlns="http://www.w3.org/2000/svg"
                                 width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -254,7 +254,7 @@
                                 <rect width="4" height="12" x="2" y="9" />
                                 <circle cx="4" cy="4" r="2" />
                             </svg></a></li>
-                        
+
                 </ul>
             </div>
 
@@ -264,21 +264,22 @@
         </div>
     </footer>
     <script>
-       const hamburger = document.querySelector('.hamburger');
-const mobileMenu = document.querySelector('.mobile-menu');
-const body = document.querySelector('body');
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const body = document.querySelector('body');
 
-hamburger.addEventListener('click', () => {
-    mobileMenu.classList.toggle('active');
-    if (mobileMenu.classList.contains('active')) {
-        body.style.overflow = 'hidden';
-    } else {
-        body.style.overflow = 'auto';
-    }
-});
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            if (mobileMenu.classList.contains('active')) {
+                body.style.overflow = 'hidden';
+            } else {
+                body.style.overflow = 'auto';
+            }
+        });
         let modals = document.getElementsByClassName("modal");
         let btns = document.getElementsByClassName("modal-button");
         let spans = document.getElementsByClassName("close");
+
 
         for (let i = 0; i < btns.length; i++) {
             btns[i].onclick = function () {
