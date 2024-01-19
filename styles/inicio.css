@@ -95,7 +95,7 @@ body{
     position: fixed;
     right: -100%;
     width: 100%;
-    height: 50vh;
+    height: 100%;
     background-color: #000000;
     color: #ffffff;
     opacity: 0.95;
@@ -117,7 +117,12 @@ body{
     text-decoration: none;
     font-size: x-large;
     padding: 1em;
+    width: 100%;
     border-bottom: #861ec7 1px solid;
+}
+
+.mobile-menu ul{
+    padding:0;
 }
 
 
@@ -170,6 +175,10 @@ body{
     font-weight: 700;
     letter-spacing: 0.5rem;
     text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+    overflow: hidden; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
 }
 
 .section-one a {
