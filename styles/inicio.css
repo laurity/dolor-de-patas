@@ -267,6 +267,10 @@ body{
     border-radius: 1rem;
     transition: all 0.3s ease 0s;
 }
+.contenedor-section-two a:hover {
+    background-color: #98ddff;
+    transition: all 0.3s ease 0s;
+}
 
 
 @media screen and (max-width: 768px) {
