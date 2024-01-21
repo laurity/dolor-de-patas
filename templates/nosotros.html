@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/contacto.css">
-    <link rel="short icon" href="logo.png">
-    <title>Dolor de patas - Amigos del Perro</title>
+    <link rel="stylesheet" href="/styles/nosotros.css">
+    <link rel="short icon" href="/logo.png">
+    <title>Dolor de patas - Dolor de patas</title>
 </head>
 
 <body>
     <header>
-        <a href="index.html"><img src="/logo.png" alt="logo" class="logo"></a>
+        <a href="/index.html"><img src="/logo.png" alt="logo" class="logo"></a>
         <nav class="navbar">
 
             <ul class="nav-li">
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="/index.html">Inicio</a></li>
                 <li><a href="/templates/nosotros.html">Nosotros</a></li>
                 <li><a href="/templates/contacto.html">Contacto</a></li>
             </ul>
@@ -29,20 +29,58 @@
                 <li><a href="/templates/contacto.html">Contacto</a></li>
             </ul>
         </nav>
-
     </header>
- <main>
-    
- </main>
+
+    <main>
+        <section class="section-about">
+            <h1>Acerca de Dolor de patas</h1>
+            <p>Bienvenido a nuestra organización dedicada al cuidado y bienestar de mascotas con habilidades especiales.
+                <br>En Dolor de patas, creemos que todos los seres vivos merecen amor, compasión y la oportunidad de tener
+                una vida plena.</p>
+        </section>
+        <div class="grid-container">
+
+        <section class="section-mission">
+            <h2>Nuestra Misión</h2>
+            <p>Nuestra misión es proporcionar un refugio seguro y amoroso para mascotas con discapacidades, ofreciendo la
+                posibilidad de adopción y apadrinamiento. <br>Trabajamos arduamente para concientizar sobre las necesidades
+                específicas de estos animales y fomentar una comunidad compasiva.</p>
+        </section>
+
+        <section class="section-values">
+            <h2>Nuestros Valores</h2>
+            <ul>
+                <li>Compasión: Creemos en tratar a cada ser con amor y empatía.</li>
+                <li>Respeto: Valoramos la diversidad y respetamos las necesidades individuales de cada mascota.</li>
+                <li>Dedicación: Estamos comprometidos con mejorar la vida de los animales con discapacidades.</li>
+            </ul>
+        </section>
+
+
+        <section class="section-get-involved">
+            <h2>Colabora con Nosotros</h2>
+            <p>¡Tú también puedes formar parte de nuestra misión! Hay varias formas de contribuir:</p>
+            <ul>
+                <li>Adopta: Descubre la maravillosa oportunidad de transformar vidas adoptando a una mascota con
+                    habilidades especiales.</li>
+                <li>Apadrina: Contribuye con sus necesidades médicas, proporcionando juguetes adaptados o simplemente
+                    ofreciendo tu cariño.</li>
+                <li>Voluntariado: Únete a nuestro equipo como voluntario y contribuye directamente al bienestar de los
+                    animales.</li>
+            </ul>
+            <p>¡Tu apoyo hace la diferencia!</p>
+        </section>
+    </div>
+
+    </main>
 
     <footer>
-
         <div class="footer-nav">
             <img src="/logo.png" alt="logo" class="footer-logo">
             <ul>
                 <li><a href="/index.html">Inicio</a></li>
-                <li><a href="/templates/nosotros.html">Nosotros</a></li>
-                <li><a href="/templates/contacto.html">Contacto</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
 
             <hr>
@@ -108,6 +146,7 @@
             </div>
         </div>
     </footer>
+
     <script>
         const hamburger = document.querySelector('.hamburger');
         const mobileMenu = document.querySelector('.mobile-menu');
@@ -121,6 +160,26 @@
                 body.style.overflow = 'auto';
             }
         });
+        let modals = document.getElementsByClassName("modal");
+        let btns = document.getElementsByClassName("modal-button");
+        let spans = document.getElementsByClassName("close");
+
+
+        for (let i = 0; i < btns.length; i++) {
+            btns[i].onclick = function () {
+                modals[i].style.display = "block";
+            }
+
+            spans[i].onclick = function () {
+                modals[i].style.display = "none";
+            }
+
+            window.onclick = function (event) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
     </script>
 </body>
 

@@ -6,14 +6,13 @@
 
 
 *, ::after, ::before {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: 'Nunito', sans-serif;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
+
 
 .section-one h1, .section-one p, .section-one a {
   animation: fadeIn 2s ease;
@@ -139,6 +138,7 @@ iframe {
   margin-right: -50vw;
 }
 
+
 .flex-container {
   display: flex;
   justify-content: space-between;
@@ -146,11 +146,11 @@ iframe {
 
 .container-form, .container {
   margin: 5%;
-  width: 50%; 
+  width: 45%; 
 }
 
 .container-form {
-  padding: 20px;
+  padding: 10px;
 }
 
 .container-form label {
@@ -160,7 +160,7 @@ iframe {
 }
 
 .container-form input {
-  width: 100%;
+  width: 75%;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -181,7 +181,7 @@ iframe {
 }
 
 .container-form select, .container-form textarea {
-  width: 100%;
+  width: 75%;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -190,11 +190,15 @@ iframe {
 }
 
 .container {
+  max-width: 100%;
   margin: 50vh auto;
   padding: 20px;
   border-left: #7986CB 1px solid;
-  font-size: x-large;
+  font-size: large;
 
+}
+p{
+  margin: 10px;
 }
 
 .errores {
@@ -203,6 +207,14 @@ iframe {
   list-style: var(--li-list-style);
 }
 
+
+@media (max-width: 1024px) {
+  .container-form, .container {
+      width: 100%;
+  }
+}
+
+
 @media (max-width: 768px) {
   .flex-container {
       flex-direction: column;
@@ -210,6 +222,7 @@ iframe {
 
   .container-form, .container {
       width: 100%;
+      margin: 5%;
   }
 }
 
