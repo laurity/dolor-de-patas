@@ -57,9 +57,6 @@ body.dark-mode #dark-mode-button {
   color: #000;
 }
 
-
-
-
 .section-one h1, .section-one p, .section-one a {
   animation: fadeIn 2s ease;
 }

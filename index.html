@@ -131,7 +131,7 @@
                         </p>
                     </div>
                 </div>
-
+            
                 <div class="card">
                     <img src="/assets/img/gato 1.jpg" alt="Pumba">
                     <h3>Pumba</h3>
@@ -156,7 +156,7 @@
                         </p>
                     </div>
                 </div>
-
+            
                 <div class="card">
                     <img src="/assets/img/perro 2.jpg" alt="Timba">
                     <h3>Timba</h3>
@@ -181,8 +181,8 @@
                         </p>
                     </div>
                 </div>
-
-                <div class="card">
+            
+                <div class="card ">
                     <img src="/assets/img/gato 2.jpg" alt="Bimba">
                     <h3>Bimba</h3>
                     <p>Bimba, una gata sin ojos, despierta admiración con su
@@ -207,6 +207,22 @@
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section class="section-four">
+            <h2 class="h2-section-four">Mascotas que han recibido una segunda oportunidad</h2>
+            <div class="carousel-container">
+                <button id="prevBtn">&lt;</button>
+                <div class="carousel-slide">
+                  <img src="/assets/img/carousel-1.jpg" alt="Image 1">
+                  <img src="/assets/img/carousel-2.jpg" alt="Image 2">
+                  <img src="/assets/img/carousel-3.jpg" alt="Image 3">
+                  <img src="/assets/img/carousel-4.jpg" alt="Image 4">
+                  <img src="/assets/img/carousel-5.jpg" alt="Image 5">
+                  <img src="/assets/img/carousel-6.jpg" alt="Image 6">
+                </div>
+                <button id="nextBtn">&gt;</button>
+              </div>
         </section>
         
     </main>
@@ -334,7 +350,44 @@
         //Modo oscuro
         document.getElementById('dark-mode-button').addEventListener('click', function() {
         document.body.classList.toggle('dark-mode');
+        });
+
+        //Carrusel
+        document.addEventListener("DOMContentLoaded", function () {
+  let carousel = document.querySelector(".carousel-slide");
+  let items = carousel.querySelectorAll("img");
+  let prevBtn = document.querySelector("#prevBtn");
+  let nextBtn = document.querySelector("#nextBtn");
+
+  // Function to show a specific item
+  function showItem(index) {
+    items.forEach((item, idx) => {
+      item.style.display = "none";
+      if (idx === index) {
+        item.style.display = "block";
+      }
+    });
+  }
+
+  // Event listeners for buttons
+  prevBtn.addEventListener("click", () => {
+    let index = [...items].findIndex((item) =>
+      item.style.display === "block"
+    );
+    showItem((index - 1 + items.length) % items.length);
+  });
+
+  nextBtn.addEventListener("click", () => {
+    let index = [...items].findIndex((item) =>
+      item.style.display === "block"
+    );
+    showItem((index + 1) % items.length);
+  });
+
+  // Inicialmente, muestra el primer elemento
+  showItem(0);
 });
+
     </script>
 </body>
 

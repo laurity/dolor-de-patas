@@ -529,6 +529,52 @@ body.dark-mode #dark-mode-button {
   }
 }
 
+/*Carousel*/
+.carousel-container {
+  position: relative;
+  width: 100%;  /* Ajusta el ancho del carrusel a 300px */
+  height: 750px; /* Ajusta la altura del carrusel a 300px */
+  overflow: hidden;
+  margin: auto;
+  padding-bottom: 2%;
+}
+
+.carousel-slide {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.carousel-slide img:first-child {
+  display: block;
+}
+
+#prevBtn, #nextBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#prevBtn {
+  left: 10px;
+}
+
+#nextBtn {
+  right: 10px;
+}
+
 /* Footer */
 footer {
   display: flex;
