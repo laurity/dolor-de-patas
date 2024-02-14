@@ -32,7 +32,7 @@ body {
   color: #fff;
 }
 
-body.dark-mode .h2-section-three {
+body.dark-mode .h2-section-three, body.dark-mode .h2-section-four {
   color: white;
 }
 
@@ -532,8 +532,8 @@ body.dark-mode #dark-mode-button {
 /*Carousel*/
 .carousel-container {
   position: relative;
-  width: 100%;  /* Ajusta el ancho del carrusel a 300px */
-  height: 750px; /* Ajusta la altura del carrusel a 300px */
+  width: 100%;
+  height: 750px;
   overflow: hidden;
   margin: auto;
   padding-bottom: 2%;
@@ -541,30 +541,39 @@ body.dark-mode #dark-mode-button {
 
 .carousel-slide {
   display: flex;
-  width: 100%;
+  width: 600%; /* Seis imágenes, por lo tanto 600% del ancho */
   height: 100%;
+  transition: transform 0.5s ease; /* Agregamos transición al desplazamiento */
 }
 
 .carousel-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: none;
 }
 
-.carousel-slide img:first-child {
+.carousel-slide img.active {
   display: block;
 }
 
-#prevBtn, #nextBtn {
+#prevBtn,
+#nextBtn {
   position: absolute;
+  font-size: 100px;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  background-color: transparent;
+  color: #fff;
   border: none;
   padding: 10px;
   cursor: pointer;
+  transition: color 0.5s ease;
+  z-index: 1;
+}
+
+#prevBtn:hover,
+#nextBtn:hover {
+  color: #ddd;
 }
 
 #prevBtn {
@@ -574,6 +583,44 @@ body.dark-mode #dark-mode-button {
 #nextBtn {
   right: 10px;
 }
+
+@media (max-width: 768px) {
+  .carousel-container {
+    height: 500px;
+  }
+
+  #prevBtn, #nextBtn {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-container {
+    height: 300px;
+  }
+
+  #prevBtn, #nextBtn {
+    font-size: 30px;
+  }
+}
+
+section-four{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5vh;
+
+}
+
+.h2-section-four {
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 700;
+  color: #000;
+  margin:1rem;
+}
+
 
 /* Footer */
 footer {
