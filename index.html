@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/inicio.css">
+    <link rel="stylesheet" href="build/css/app.css">
     <link rel="short icon" href="logo.png">
     <title>Dolor de patas - Amigos del Perro</title>
 </head>
@@ -46,7 +46,7 @@
     <main>
         <section class="section-one">
             <div class="video-container">
-            <video loop autoplay muted>
+            <video style="width: 100%;" loop autoplay muted>
                 <source src="/assets/img/video-gato.mp4" type="video/mp4">
                 Tu navegador no soporta el elemento de video.
             </video>
@@ -360,47 +360,51 @@
         });
 
         //Carrusel
-    document.addEventListener("DOMContentLoaded", function () {
-  let carousel = document.querySelector(".carousel-slide");
-  let items = carousel.querySelectorAll("img");
-  let prevBtn = document.querySelector("#prevBtn");
-  let nextBtn = document.querySelector("#nextBtn");
+    window.onload = function () {
+    let carousel = document.querySelector(".carousel-slide");
+    let items = document.querySelectorAll(".carousel-slide img");
+    let prevBtn = document.querySelector("#prevBtn");
+    let nextBtn = document.querySelector("#nextBtn");
 
-  let currentIndex = 0;
-  let slideWidth = items[0].clientWidth;
-  let intervalId;
+    let currentIndex = 0;
+    let slideWidth;
+    let intervalId;
 
-  function showItem(index) {
-    carousel.style.transition = "transform 0.5s ease-in-out";
-    carousel.style.transform = `translateX(-${index * slideWidth}px)`;
-    currentIndex = index;
-  }
+    function showItem(index) {
+        if (items[0]) {
+        slideWidth = items[0].clientWidth;
+        carousel.style.transition = "transform 0.5s ease-in-out";
+        carousel.style.transform = `translateX(-${index * slideWidth}px)`;
+        currentIndex = index;
+        }
+    }
 
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % items.length;
-    showItem(currentIndex);
-  }
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % items.length;
+        showItem(currentIndex);
+    }
 
-  nextBtn.addEventListener("click", () => {
-    nextSlide();
-  });
+    nextBtn.addEventListener("click", () => {
+        nextSlide();
+    });
 
-  prevBtn.addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + items.length) % items.length;
-    showItem(currentIndex);
-  });
+    prevBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + items.length) % items.length;
+        showItem(currentIndex);
+    });
 
-  function startCarousel() {
-    intervalId = setInterval(nextSlide, 5000); // Cambio cada 5 segundos
-  }
+    function startCarousel() {
+        intervalId = setInterval(nextSlide, 5000); // Cambio cada 5 segundos
+    }
 
-  function stopCarousel() {
-    clearInterval(intervalId);
-  }
+    function stopCarousel() {
+        clearInterval(intervalId);
+    }
 
-  startCarousel(); 
+    startCarousel(); 
 
-});
+    };
+
     </script>
 </body>
 

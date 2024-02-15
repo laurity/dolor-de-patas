@@ -541,9 +541,9 @@ body.dark-mode #dark-mode-button {
 
 .carousel-slide {
   display: flex;
-  width: 600%; /* Seis imágenes, por lo tanto 600% del ancho */
+  width: 600%; 
   height: 100%;
-  transition: transform 0.5s ease; /* Agregamos transición al desplazamiento */
+  transition: transform 0.5s ease; 
 }
 
 .carousel-slide img {
