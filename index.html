@@ -218,18 +218,17 @@
         <section class="section-four">
             <h2 class="h2-section-four">Mascotas que han recibido una segunda
             oportunidad</h2>
-            <div class="carousel-container">
-                <button id="prevBtn">&lt;</button>
-                <div class="carousel-slide">
-                  <img src="/assets/img/carousel-1.jpg" alt="Image 1">
-                  <img src="/assets/img/carousel-2.jpg" alt="Image 2">
-                  <img src="/assets/img/carousel-3.jpg" alt="Image 3">
-                  <img src="/assets/img/carousel-4.jpg" alt="Image 4">
-                  <img src="/assets/img/carousel-5.jpg" alt="Image 5">
-                  <img src="/assets/img/carousel-6.jpg" alt="Image 6">
+            <div class="slider">
+                <div class="slides">
+                    <img class="slide" src="/assets/img/carousel-1.jpg" alt="1">
+                    <img class="slide" src="/assets/img/carousel-2.jpg" alt="2">
+                    <img class="slide" src="/assets/img/carousel-3.jpg" alt="3">
+                    <img class="slide" src="/assets/img/carousel-4.jpg" alt="4">
+                    <img class="slide" src="/assets/img/carousel-5.jpg" alt="5">
+                    <img class="slide" src="/assets/img/carousel-6.jpg" alt="6">
                 </div>
-                <button id="nextBtn">&gt;</button>
-              </div>
+                <button class="prev" onclick="prevSlide()">&#10094</button>
+                <button class="next" onclick="nextSlide()">&#10095</button>
         </section>
         
     </main>
@@ -360,51 +359,41 @@
         });
 
         //Carrusel
-    window.onload = function () {
-    let carousel = document.querySelector(".carousel-slide");
-    let items = document.querySelectorAll(".carousel-slide img");
-    let prevBtn = document.querySelector("#prevBtn");
-    let nextBtn = document.querySelector("#nextBtn");
+        const slides = document.querySelectorAll('.slides img');
+            let slideIndex = 0;
+            let intervalId = null;
 
-    let currentIndex = 0;
-    let slideWidth;
-    let intervalId;
+        document.addEventListener('DOMContentLoaded', initializeSlider);
+            
+            function initializeSlider() {
+                if(slides.length > 0) {
+                    slides[slideIndex].classList.add('displaySlide');
+                    intervalId = setInterval(nextSlide, 5000);
+                }
+        
+            }
+            function showSlide(index) {
+            slideIndex = index >= slides.length ? 0 : index < 0 ? slides.length - 1 : index;
+            slides.forEach(slide => slide.classList.remove('displaySlide'));
+            slides[slideIndex].classList.add('displaySlide');
+            }
 
-    function showItem(index) {
-        if (items[0]) {
-        slideWidth = items[0].clientWidth;
-        carousel.style.transition = "transform 0.5s ease-in-out";
-        carousel.style.transform = `translateX(-${index * slideWidth}px)`;
-        currentIndex = index;
-        }
-    }
+function nextSlide() {
+    clearInterval(intervalId);
+    slideIndex++;
+    showSlide(slideIndex);
+}
 
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % items.length;
-        showItem(currentIndex);
-    }
+function prevSlide() {
+    clearInterval(intervalId);
+    slideIndex--;
+    showSlide(slideIndex);
+}
 
-    nextBtn.addEventListener("click", () => {
-        nextSlide();
-    });
-
-    prevBtn.addEventListener("click", () => {
-        currentIndex = (currentIndex - 1 + items.length) % items.length;
-        showItem(currentIndex);
-    });
-
-    function startCarousel() {
-        intervalId = setInterval(nextSlide, 5000); // Cambio cada 5 segundos
-    }
-
-    function stopCarousel() {
-        clearInterval(intervalId);
-    }
-
-    startCarousel(); 
-
-    };
-
+window.onload = function() {
+    showSlide(slideIndex); // Mostrar la primera imagen
+    intervalId = setInterval(nextSlide, 5000); // Cambiar a la siguiente imagen cada 5 segundos
+};
     </script>
 </body>
 
