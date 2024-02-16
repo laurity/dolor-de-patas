@@ -2,7 +2,9 @@
 
 ## Descripcion
 
-Proyecto para el tema 5 que trata sobre adoptar mascotas discapacitadas.
+Proyecto para el tema 6 que trata sobre adoptar mascotas discapacitadas.
+
+Se ha llevado a acabo la introducción de un carrusel y migración a SASS
 
 ## Contact
 
